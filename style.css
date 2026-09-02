@@ -1,0 +1,15 @@
+.header {
+    background-color: #e9d200;
+    padding: 6px;
+}
+.header b {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    font-size: 20px;
+}
+.header marquee {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    width: 80%;
+}
