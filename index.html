@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex1</title> 
+</head>
+<body>
+    <h1>Create Account</h1>
+    <form id="accountForm" action="ex2.html">
+        <label for="fname">First name:</label>
+        <input type="text" id="fname" name="fname" required><br><br>
+        
+        <label for="lname">Last name:</label>
+        <input type="text" id="lname" name="lname" required><br><br>
+        
+        <label for="sex">Sex:</label>
+        <!-- เพิ่ม value="" เพื่อให้ required ทำงานเมื่อยังไม่เลือก -->
+        <select id="sex" name="sex" required>
+            <option value="" disabled selected>-- Select Sex --</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <button type="submit" id="submit" disabled>Submit</button>
+    </form>
+
+    <script>
+        const form = document.getElementById('accountForm');
+        const submitBtn = document.getElementById('submit');
+
+        form.addEventListener('input', function() {
+            if (form.checkValidity()) {
+                submitBtn.disabled = false;
+            } else {
+                submitBtn.disabled = true;
+            }
+        });
+    </script>
+</body>
+</html>

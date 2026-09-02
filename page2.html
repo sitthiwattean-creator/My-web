@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex2</title>
+</head>
+<body>
+    <h1>Account Created</h1>
+
+    <p><strong>First Name:</strong> <span style="color: blue;" id="fname"></span></p>
+    <p><strong>Last Name:</strong> <span style="color: blue;" id="lname"></span></p>
+    <p><strong>Sex:</strong> <span style="color: blue;" id="sex"></span></p>
+    <p><strong>Email:</strong> <span style="color: blue;" id="email"></span></p>
+
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+
+        document.getElementById('fname').textContent = urlParams.get('fname');
+        document.getElementById('lname').textContent = urlParams.get('lname');
+        document.getElementById('sex').textContent = urlParams.get('sex');
+        document.getElementById('email').textContent = urlParams.get('email');
+    </script>
+</body>
+</html>
